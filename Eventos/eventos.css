@@ -14,7 +14,7 @@ body{
     margin-top: 80px;
     transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
     overflow-x: hidden;
-    background-color: #b45f06;
+    background-color: #f0e8df;
 }
 
 /* - Scrollbar - */
@@ -52,25 +52,24 @@ header #Hero {
     height: 400px;
     width: 2000px;
     position: relative;
-    left: -330px;
-    top: -80px;
-    background-image: url('img/hero.png');
+    left: -370px;
+    top: -100px;
+    background-image: url('../img/hero2.png');
     background-repeat: no-repeat;
+    background-position: 10vh;
     background-size: 1500px;
-    filter: brightness(70%);
+    filter: brightness(50%);
 }
 
 header h1 {
     position: relative;
-    left: 580px;
+    left: 650px;
     top: -340px;
     color: #fff;
     font-size: 70px;
 }
 
-header h1 span {
-    color: #f37d23;
-}
+
 
 
 /* - Main - */
@@ -81,19 +80,26 @@ main{
     height: 1100px;
 }
 
+main .nosotros h3 {
+    position: relative;
+    left: 700px;
+    top: 40px;
+    color: orangered;
+    font-size: 30px;
+}
+
 main .nosotros h2 {
     position: relative;
-    left: 600px;
-    top: 40px;
-    color: white;
-    font-size: 40px;
+    left: 0px;
+    color: #000000;
+    font-size: 30px;
 }
 
 main .nosotros p {
     position: relative;
     left: 100px;
     top: 70px;
-    color: #fff;
+    color: #000000;
     font-size: 20px;
 }
 
@@ -132,6 +138,83 @@ main .videos #three {
     left: 560px;
     top: 480px;
 }
+
+.calendar {
+    position: relative;
+    left: 70px;
+    top: 100px;
+    display: inline-block;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+
+.calendar-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.calendar-week-days {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.calendar-week-day {
+    font-size: 16px;
+    font-weight: bold;
+    color: #888;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+}
+
+.calendar-day {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: #ddd;
+}
+
+.calendar-today {
+    background-color: #4caf50;
+    color: white;
+}
+
+.calendar-selected {
+    background-color: #f50057;
+    color: white;
+}
+
+
 
     /* - NavBar - */
 
