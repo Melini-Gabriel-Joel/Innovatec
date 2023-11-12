@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body{
+    margin-left: 80px;
+    margin-top: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    overflow-x: hidden;
+    background-color: #b45f06;
+}
+
+/* - Scrollbar - */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body::-webkit-scrollbar {
+    width: 0px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(95, 95, 95);    /* color of the scroll thumb */
+    border-radius: 2px;
+}
+
+
+/* - Header / Hero - */
+
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #f5f5f5;
+    display: grid;
+    grid-template-columns: 1fr 1000px;
+    align-items: center;
+    top: 0;
+    z-index: 200;
+}
+
+header #Hero {
+    height: 400px;
+    width: 2000px;
+    position: relative;
+    left: -330px;
+    top: -100px;
+    background-image: url('../img/hero3.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    filter: brightness(70%);
+}
+
+header h1 {
+    position: relative;
+    left: 580px;
+    top: -340px;
+    color: #fff;
+    font-size: 70px;
+}
+
+header h1 span {
+    color: #f37d23;
+}
+
+
+/* - Main - */
+
+
+main{
+    padding: 20px;
+    height: 1100px;
+}
+
+main .nosotros h2 {
+    position: relative;
+    left: 600px;
+    top: 40px;
+    color: white;
+    font-size: 40px;
+}
+
+main .nosotros p {
+    position: relative;
+    left: 100px;
+    top: 70px;
+    color: #fff;
+    font-size: 20px;
+}
+
+main .hace h2 {
+    position: relative;
+    left: 600px;
+    top: 200px;
+    color: white;
+    font-size: 40px;
+}
+
+main .hace p {
+    position: relative;
+    left: 100px;
+    top: 250px;
+    color: #fff;
+    font-size: 15px;
+}
+
+main .videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main .videos iframe {
+    position: relative;
+    top: 400px;
+    left: 200px;
+    width: 400px;
+    border: none;
+    border-radius: 20px;
+}
+
+main .videos #three {
+    position: relative;
+    left: 560px;
+    top: 480px;
+}
+
+    /* - NavBar - */
+
+.icon__menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon__menu i{
+    font-size: 26px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu__side{
+    width: 260px;
+    height: 100%;
+    background: #1c1c1c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*Ocultar scroll para chrome, safari y opera*/
+.menu__side::-webkit-scrollbar{
+    display: none;
+}
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu__side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
+.name__page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border-bottom: 1px solid;
+}
+
+.name__page img{
+    width: 30px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.options__menu{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+.options__menu a{
+    color: #ffffffb2;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+}
+
+.options__menu a:hover{
+    color: white;
+}
+
+.options__menu .option{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.options__menu .option i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.options__menu .option h4{
+    font-weight: 300;
+    cursor: pointer;
+}
+
+a.selected{
+    color: #fff;
+}
+
+.selected:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+/*Clases para usar en JavaScript*/
+
+.body_move{
+    margin-left: 250px;
+}
+
+.menu__side_move{
+    width: 240px;
+}
+
+/* - Responsive Page - */
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+    
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
